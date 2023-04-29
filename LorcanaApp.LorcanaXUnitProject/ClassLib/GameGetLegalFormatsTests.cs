@@ -11,4 +11,12 @@ public class GameGetLegalFormatsTests
 
         var legalFormats = game.GetLegalFormats();
     }
+
+    [Fact]
+    public void GetLegalFormats_OnePlayer_EmptyList()
+    {
+        var game = new Game();
+
+        game.AddPlayer();
+    }
 }
