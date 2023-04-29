@@ -8,5 +8,7 @@ public class DeckGetLegalFormatsTests
     public void GetLegalFormats_EmptyDeck_EmptyList()
     {
         var deck = new Deck();
+
+        deck.GetLegalFormats();
     }
 }
