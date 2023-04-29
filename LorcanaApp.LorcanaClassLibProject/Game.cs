@@ -1,5 +1,5 @@
 ﻿namespace LorcanaApp.LorcanaClassLibProject;
-public class Class1
-{
 
+public class Game
+{
 }
