@@ -8,5 +8,7 @@ public class GameGetLegalFormatsTests
     public void GetLegalFormats_EmptyGame_EmptyList()
     {
         var game = new Game();
+
+        var legalFormats = game.GetLegalFormats();
     }
 }
