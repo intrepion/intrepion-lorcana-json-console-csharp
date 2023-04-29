@@ -6,4 +6,8 @@ public class Game
     {
         return new List<int>();
     }
+
+    public void AddPlayer()
+    {
+    }
 }
