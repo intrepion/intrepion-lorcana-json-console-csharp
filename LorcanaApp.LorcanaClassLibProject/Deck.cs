@@ -2,8 +2,9 @@ namespace LorcanaApp.LorcanaClassLibProject;
 
 public class Deck
 {
-    public void GetLegalCardsToAdd(Format format)
+    public List<int> GetLegalCardsToAdd(Format format)
     {
+        return new List<int>();
     }
 
     public void GetLegalFormats()
