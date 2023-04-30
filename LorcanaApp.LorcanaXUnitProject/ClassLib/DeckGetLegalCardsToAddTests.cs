@@ -9,6 +9,6 @@ public class DeckGetLegalCardsToAddTests
     {
         var deck = new Deck();
 
-        deck.GetLegalCardsToAdd(Format.Demo);
+        var cards = deck.GetLegalCardsToAdd(Format.Demo);
     }
 }
