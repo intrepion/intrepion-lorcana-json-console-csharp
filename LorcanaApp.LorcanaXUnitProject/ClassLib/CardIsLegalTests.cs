@@ -1,3 +1,5 @@
+using LorcanaApp.LorcanaClassLibProject;
+
 namespace LorcanaApp.LorcanaXUnitProject.ClassLib;
 
 public class CardIsLegalTests
