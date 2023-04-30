@@ -8,5 +8,7 @@ public class CardIsLegalTests
     public void IsLegal_EmptyCard_False()
     {
         var card = new Card();
+
+        card.IsLegal();
     }
 }
