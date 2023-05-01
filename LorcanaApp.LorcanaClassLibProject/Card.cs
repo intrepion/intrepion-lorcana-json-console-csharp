@@ -2,7 +2,8 @@ namespace LorcanaApp.LorcanaClassLibProject;
 
 public class Card
 {
-    public void IsLegal()
+    public bool IsLegal()
     {
+        return false;
     }
 }
