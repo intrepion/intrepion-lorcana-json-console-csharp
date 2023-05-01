@@ -6,6 +6,6 @@ public class Card
 
     public bool IsLegal()
     {
-        return false;
+        return true;
     }
 }
