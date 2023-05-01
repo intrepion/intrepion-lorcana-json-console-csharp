@@ -9,6 +9,6 @@ public class CardIsLegalTests
     {
         var card = new Card();
 
-        card.IsLegal();
+        var actual = card.IsLegal();
     }
 }
