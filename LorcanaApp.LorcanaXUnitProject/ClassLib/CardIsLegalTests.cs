@@ -15,7 +15,10 @@ public class CardIsLegalTests
     [Fact]
     public void IsLegal_FullCard_True()
     {
-        var card = new Card();
+        var card = new Card
+        {
+            Name = "Ariel",
+        };
 
         var actual = card.IsLegal();
 
