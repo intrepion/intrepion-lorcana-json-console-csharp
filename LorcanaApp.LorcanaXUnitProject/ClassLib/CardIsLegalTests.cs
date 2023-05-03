@@ -4,12 +4,23 @@ namespace LorcanaApp.LorcanaXUnitProject.ClassLib;
 
 public class CardIsLegalTests
 {
+    private Card _card { get; set; }
+
+    public CardIsLegalTests()
+    {
+        _card = new Card
+        {
+            Name = "Ariel",
+            Version = "On Human Legs",
+        };
+    }
+
     [Fact]
     public void IsLegal_EmptyCard_False()
     {
-        var card = new Card();
+        _card.Name = null;
 
-        var actual = card.IsLegal();
+        var actual = _card.IsLegal();
 
         Assert.False(actual);
     }
@@ -17,12 +28,9 @@ public class CardIsLegalTests
     [Fact]
     public void IsLegal_EmptyName_False()
     {
-        var card = new Card
-        {
-            Name = "",
-        };
+        _card.Name = "";
 
-        var actual = card.IsLegal();
+        var actual = _card.IsLegal();
 
         Assert.False(actual);
     }
@@ -30,12 +38,9 @@ public class CardIsLegalTests
     [Fact]
     public void IsLegal_WhitespaceName_False()
     {
-        var card = new Card
-        {
-            Name = " ",
-        };
+        _card.Name = " ";
 
-        var actual = card.IsLegal();
+        var actual = _card.IsLegal();
 
         Assert.False(actual);
     }
@@ -43,13 +48,7 @@ public class CardIsLegalTests
     [Fact]
     public void IsLegal_FullCard_True()
     {
-        var card = new Card
-        {
-            Name = "Ariel",
-            Version = "On Human Legs",
-        };
-
-        var actual = card.IsLegal();
+        var actual = _card.IsLegal();
 
         Assert.True(actual);
     }
