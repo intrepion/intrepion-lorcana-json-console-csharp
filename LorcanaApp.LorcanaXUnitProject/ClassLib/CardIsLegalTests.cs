@@ -10,6 +10,8 @@ public class CardIsLegalTests
         var card = new Card();
 
         var actual = card.IsLegal();
+
+        Assert.False(actual);
     }
 
     [Fact]
