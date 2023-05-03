@@ -44,6 +44,6 @@ public class Card
 
     public bool IsLegal()
     {
-        return true;
+        return Name != null;
     }
 }
