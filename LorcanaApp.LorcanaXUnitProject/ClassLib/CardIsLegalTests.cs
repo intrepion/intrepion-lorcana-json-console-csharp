@@ -28,6 +28,19 @@ public class CardIsLegalTests
     }
 
     [Fact]
+    public void IsLegal_WhitespaceName_False()
+    {
+        var card = new Card
+        {
+            Name = " ",
+        };
+
+        var actual = card.IsLegal();
+
+        Assert.False(actual);
+    }
+
+    [Fact]
     public void IsLegal_FullCard_True()
     {
         var card = new Card
