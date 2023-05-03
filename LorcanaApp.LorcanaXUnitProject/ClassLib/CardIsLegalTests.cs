@@ -15,7 +15,7 @@ public class CardIsLegalTests
     [Fact]
     public void IsLegal_FullCard_True()
     {
-        var card = Card.MickeyMouseWaywardSorcerer;
+        var card = new Card();
 
         var actual = card.IsLegal();
 

@@ -2,8 +2,6 @@ namespace LorcanaApp.LorcanaClassLibProject;
 
 public class Card
 {
-    public static Card MickeyMouseWaywardSorcerer { get; } = new Card();
-
     public static List<Card> AllCards { get; } = new List<Card>{
         new Card(),
         new Card(),
