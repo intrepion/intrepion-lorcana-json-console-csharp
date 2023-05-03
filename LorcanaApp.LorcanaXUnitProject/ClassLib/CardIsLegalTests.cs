@@ -11,6 +11,7 @@ public class CardIsLegalTests
         _character = new Card
         {
             Name = "Ariel",
+            CardType = CardType.Character,
             Version = "On Human Legs",
         };
     }
