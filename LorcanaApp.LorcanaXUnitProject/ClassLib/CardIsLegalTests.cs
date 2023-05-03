@@ -46,6 +46,7 @@ public class CardIsLegalTests
         var card = new Card
         {
             Name = "Ariel",
+            Version = "On Human Legs",
         };
 
         var actual = card.IsLegal();
