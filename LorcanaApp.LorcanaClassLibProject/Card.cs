@@ -2,6 +2,7 @@ namespace LorcanaApp.LorcanaClassLibProject;
 
 public class Card
 {
+    public CardType? CardType { get; set; }
     public string? Name { get; set; }
     public string? Version { get; set; }
 

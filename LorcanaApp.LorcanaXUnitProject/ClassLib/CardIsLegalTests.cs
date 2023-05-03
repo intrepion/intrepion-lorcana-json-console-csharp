@@ -10,8 +10,8 @@ public class CardIsLegalTests
     {
         _character = new Card
         {
-            Name = "Ariel",
             CardType = CardType.Character,
+            Name = "Ariel",
             Version = "On Human Legs",
         };
     }
