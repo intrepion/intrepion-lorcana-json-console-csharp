@@ -44,6 +44,6 @@ public class Card
 
     public bool IsLegal()
     {
-        return String.IsNullOrEmpty(Name) == false;
+        return String.IsNullOrWhiteSpace(Name) == false;
     }
 }
