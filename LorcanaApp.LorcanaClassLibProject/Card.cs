@@ -3,6 +3,7 @@ namespace LorcanaApp.LorcanaClassLibProject;
 public class Card
 {
     public string? Name { get; set; }
+    public string? Version { get; set; }
 
     public static List<Card> AllCards { get; } = new List<Card>{
         new Card(),
