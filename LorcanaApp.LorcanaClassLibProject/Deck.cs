@@ -4,7 +4,7 @@ public class Deck
 {
     public List<int> GetLegalCardsToAdd(Format format)
     {
-        return new List<int>();
+        return Card.AllCards;
     }
 
     public void GetLegalFormats()
