@@ -57,6 +57,16 @@ public class CardIsLegalTests
     }
 
     [Fact]
+    public void IsLegal_CharacterNullVersion_False()
+    {
+        _character.Version = null;
+
+        var actual = _character.IsLegal();
+
+        Assert.False(actual);
+    }
+
+    [Fact]
     public void IsLegal_FullCard_True()
     {
         var actual = _character.IsLegal();
