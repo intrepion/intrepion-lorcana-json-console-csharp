@@ -47,6 +47,16 @@ public class CardIsLegalTests
     }
 
     [Fact]
+    public void IsLegal_ClassificationsEmpty_False()
+    {
+        _character.Classifications = new List<Classification>();
+
+        var actual = _character.IsLegal();
+
+        Assert.False(actual);
+    }
+
+    [Fact]
     public void IsLegal_ClassificationsNull_False()
     {
         _character.Classifications = null;
