@@ -50,6 +50,10 @@ public class CardIsLegalTests
     public void IsLegal_ClassificationsNull_False()
     {
         _character.Classifications = null;
+
+        var actual = _character.IsLegal();
+
+        Assert.False(actual);
     }
 
     [Fact]
