@@ -32,6 +32,10 @@ public class CardIsLegalTests
     public void IsLegal_NullCost_False()
     {
         _character.Cost = null;
+
+        var actual = _character.IsLegal();
+
+        Assert.False(actual);
     }
 
     [Fact]
