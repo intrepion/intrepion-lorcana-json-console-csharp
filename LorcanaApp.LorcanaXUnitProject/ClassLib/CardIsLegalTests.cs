@@ -28,6 +28,12 @@ public class CardIsLegalTests
     }
 
     [Fact]
+    public void IsLegal_NullCost_False()
+    {
+        _character.Cost = null;
+    }
+
+    [Fact]
     public void IsLegal_NullInkable_False()
     {
         _character.Inkable = null;
