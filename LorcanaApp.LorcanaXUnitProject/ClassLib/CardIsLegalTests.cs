@@ -16,6 +16,7 @@ public class CardIsLegalTests
             Strength = 3,
             Type = CardType.Character,
             Version = "On Human Legs",
+            Willpower = 4,
         };
     }
 

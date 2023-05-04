@@ -8,6 +8,7 @@ public class Card
     public int? Strength { get; set; }
     public CardType? Type { get; set; }
     public string? Version { get; set; }
+    public int? Willpower { get; set; }
 
     public static List<Card> AllCards { get; } = new List<Card>{
         new Card(),
