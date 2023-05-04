@@ -2,8 +2,8 @@ namespace LorcanaApp.LorcanaClassLibProject;
 
 public class Card
 {
-    public CardType? CardType { get; set; }
     public string? Name { get; set; }
+    public CardType? Type { get; set; }
     public string? Version { get; set; }
 
     public static List<Card> AllCards { get; } = new List<Card>{
@@ -46,6 +46,19 @@ public class Card
 
     public bool IsLegal()
     {
-        return String.IsNullOrWhiteSpace(Name) == false;
+        if (String.IsNullOrWhiteSpace(Name))
+        {
+            return false;
+        }
+
+        if (Type == CardType.Character)
+        {
+            if (Version == null)
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
