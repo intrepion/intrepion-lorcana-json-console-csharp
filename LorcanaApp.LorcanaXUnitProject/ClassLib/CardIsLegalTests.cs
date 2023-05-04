@@ -92,6 +92,10 @@ public class CardIsLegalTests
     public void IsLegal_TypeCharacterStrengthNull_False()
     {
         _character.Strength = null;
+
+        var actual = _character.IsLegal();
+
+        Assert.False(actual);
     }
 
     [Fact]
