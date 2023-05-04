@@ -94,6 +94,10 @@ public class CardIsLegalTests
     public void IsLegal_TypeCharacterLoreValueNull_False()
     {
         _character.LoreValue = null;
+
+        var actual = _character.IsLegal();
+
+        Assert.False(actual);
     }
 
     [Fact]
