@@ -48,6 +48,11 @@ public class Card
 
     public bool IsLegal()
     {
+        if (Cost == null)
+        {
+            return false;
+        }
+
         if (Inkable == null)
         {
             return false;
