@@ -90,6 +90,12 @@ public class CardIsLegalTests
     }
 
     [Fact]
+    public void IsLegal_TypeCharacterLoreValueNull_False()
+    {
+        _character.LoreValue = null;
+    }
+
+    [Fact]
     public void IsLegal_TypeCharacterStrengthNull_False()
     {
         _character.Strength = null;
