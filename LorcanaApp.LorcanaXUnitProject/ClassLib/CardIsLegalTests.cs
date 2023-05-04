@@ -12,6 +12,7 @@ public class CardIsLegalTests
         {
             Cost = 4,
             Inkable = true,
+            LoreValue = 2,
             Name = "Ariel",
             Strength = 3,
             Type = CardType.Character,
