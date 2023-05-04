@@ -73,6 +73,11 @@ public class Card
 
         if (Type == CardType.Character)
         {
+            if (LoreValue == null)
+            {
+                return false;
+            }
+
             if (Strength == null)
             {
                 return false;
