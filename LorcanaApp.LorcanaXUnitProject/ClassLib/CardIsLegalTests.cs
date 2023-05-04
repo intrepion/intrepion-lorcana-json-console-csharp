@@ -41,6 +41,12 @@ public class CardIsLegalTests
     }
 
     [Fact]
+    public void IsLegal_ClassificationsNull_False()
+    {
+        _character.Classifications = null;
+    }
+
+    [Fact]
     public void IsLegal_CostNull_False()
     {
         _character.Cost = null;
