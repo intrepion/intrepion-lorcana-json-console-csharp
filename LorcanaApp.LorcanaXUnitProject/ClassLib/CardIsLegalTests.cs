@@ -129,6 +129,12 @@ public class CardIsLegalTests
     }
 
     [Fact]
+    public void IsLegal_TypeCharacterWillpowerNull_False()
+    {
+        _character.Willpower = null;
+    }
+
+    [Fact]
     public void IsLegal_TypeNull_False()
     {
         _character.Type = null;
