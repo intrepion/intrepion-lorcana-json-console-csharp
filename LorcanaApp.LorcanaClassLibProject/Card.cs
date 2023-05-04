@@ -5,6 +5,7 @@ public class Card
     public int? Cost { get; set; }
     public bool? Inkable { get; set; }
     public string? Name { get; set; }
+    public int? Strength { get; set; }
     public CardType? Type { get; set; }
     public string? Version { get; set; }
 

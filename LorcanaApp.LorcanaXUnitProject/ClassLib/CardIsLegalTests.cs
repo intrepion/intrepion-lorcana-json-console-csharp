@@ -13,6 +13,7 @@ public class CardIsLegalTests
             Cost = 4,
             Inkable = true,
             Name = "Ariel",
+            Strength = 3,
             Type = CardType.Character,
             Version = "On Human Legs",
         };
