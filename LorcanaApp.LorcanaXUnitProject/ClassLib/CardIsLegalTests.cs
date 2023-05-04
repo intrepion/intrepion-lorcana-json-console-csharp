@@ -196,6 +196,10 @@ public class CardIsLegalTests
         {
             Classification.Action,
         };
+
+        var actual = _item.IsLegal();
+
+        Assert.False(actual);
     }
 
     [Fact]
