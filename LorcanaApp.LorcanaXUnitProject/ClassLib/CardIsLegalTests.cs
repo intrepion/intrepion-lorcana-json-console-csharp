@@ -120,6 +120,16 @@ public class CardIsLegalTests
     }
 
     [Fact]
+    public void IsLegal_NameNotUppercase_False()
+    {
+        _character.Name = "Ariel";
+
+        var actual = _character.IsLegal();
+
+        Assert.False(actual);
+    }
+
+    [Fact]
     public void IsLegal_NameWhitespace_False()
     {
         _character.Name = " ";
