@@ -57,6 +57,11 @@ public class Card
             return false;
         }
 
+        if (Classifications.Count == 0)
+        {
+            return false;
+        }
+
         if (Cost == null)
         {
             return false;
