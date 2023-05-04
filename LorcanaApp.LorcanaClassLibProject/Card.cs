@@ -71,6 +71,11 @@ public class Card
 
         if (Type == CardType.Character)
         {
+            if (Strength == null)
+            {
+                return false;
+            }
+
             if (String.IsNullOrWhiteSpace(Version))
             {
                 return false;
