@@ -5,6 +5,7 @@ namespace LorcanaApp.LorcanaXUnitProject.ClassLib;
 public class CardIsLegalTests
 {
     private Card _character { get; set; }
+    private Card _item { get; set; }
 
     public CardIsLegalTests()
     {
@@ -24,6 +25,18 @@ public class CardIsLegalTests
             Type = CardType.Character,
             Version = "On Human Legs",
             Willpower = 4,
+        };
+
+        _item = new Card
+        {
+            Classifications = new List<Classification>
+            {
+                Classification.Item,
+            },
+            Cost = 1,
+            Inkable = true,
+            Name = "Dinglehopper",
+            Type = CardType.Item,
         };
     }
 
