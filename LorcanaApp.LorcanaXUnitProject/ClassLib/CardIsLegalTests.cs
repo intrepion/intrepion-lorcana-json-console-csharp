@@ -192,7 +192,10 @@ public class CardIsLegalTests
     [Fact]
     public void IsLegal_TypeItemClassificationNoItem_False()
     {
-        _item.Classifications = new List<Classification>();
+        _item.Classifications = new List<Classification>
+        {
+            Classification.Action,
+        };
     }
 
     [Fact]
