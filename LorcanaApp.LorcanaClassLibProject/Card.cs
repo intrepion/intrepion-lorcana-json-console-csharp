@@ -81,6 +81,11 @@ public class Card
             {
                 return false;
             }
+
+            if (Willpower == null)
+            {
+                return false;
+            }
         }
 
         return true;
