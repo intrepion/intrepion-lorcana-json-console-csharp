@@ -47,6 +47,11 @@ public class Card
 
     public bool IsLegal()
     {
+        if (Inkable == null)
+        {
+            return false;
+        }
+
         if (String.IsNullOrWhiteSpace(Name))
         {
             return false;
