@@ -2,6 +2,7 @@ namespace LorcanaApp.LorcanaClassLibProject;
 
 public class Card
 {
+    public bool? Inkable { get; set; }
     public string? Name { get; set; }
     public CardType? Type { get; set; }
     public string? Version { get; set; }
