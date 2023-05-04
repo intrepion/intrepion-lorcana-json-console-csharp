@@ -51,6 +51,11 @@ public class Card
             return false;
         }
 
+        if (Type == null)
+        {
+            return false;
+        }
+
         if (Type == CardType.Character)
         {
             if (String.IsNullOrWhiteSpace(Version))
