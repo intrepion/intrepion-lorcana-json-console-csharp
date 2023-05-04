@@ -88,7 +88,7 @@ public class CardIsLegalTests
     }
 
     [Fact]
-    public void IsLegal_TypeCharacterEmptyVersion_False()
+    public void IsLegal_TypeCharacterVersionEmpty_False()
     {
         _character.Version = "";
 
@@ -98,7 +98,7 @@ public class CardIsLegalTests
     }
 
     [Fact]
-    public void IsLegal_TypeCharacterNullVersion_False()
+    public void IsLegal_TypeCharacterVersionNull_False()
     {
         _character.Version = null;
 
@@ -108,7 +108,7 @@ public class CardIsLegalTests
     }
 
     [Fact]
-    public void IsLegal_TypeCharacterWhitespaceVersion_False()
+    public void IsLegal_TypeCharacterVersionWhitespace_False()
     {
         _character.Version = " ";
 
