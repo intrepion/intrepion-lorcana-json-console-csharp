@@ -53,7 +53,7 @@ public class Card
 
         if (Type == CardType.Character)
         {
-            if (String.IsNullOrEmpty(Version))
+            if (String.IsNullOrWhiteSpace(Version))
             {
                 return false;
             }
