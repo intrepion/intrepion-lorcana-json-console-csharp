@@ -177,6 +177,12 @@ public class CardIsLegalTests
     }
 
     [Fact]
+    public void IsLegal_TypeItemClassificationNoItem_False()
+    {
+        _item.Classifications = new List<Classification>();
+    }
+
+    [Fact]
     public void IsLegal_TypeNull_False()
     {
         _character.Type = null;
