@@ -10,6 +10,12 @@ public class CardIsLegalTests
     {
         _character = new Card
         {
+            Classifications = new List<Classification>
+            {
+                Classification.Hero,
+                Classification.Princess,
+                Classification.Storyborn,
+            },
             Cost = 4,
             Inkable = true,
             LoreValue = 2,

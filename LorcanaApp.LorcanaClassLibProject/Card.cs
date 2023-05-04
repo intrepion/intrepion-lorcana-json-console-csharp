@@ -2,6 +2,7 @@ namespace LorcanaApp.LorcanaClassLibProject;
 
 public class Card
 {
+    public List<Classification>? Classifications { get; set; }
     public int? Cost { get; set; }
     public bool? Inkable { get; set; }
     public int? LoreValue { get; set; }
