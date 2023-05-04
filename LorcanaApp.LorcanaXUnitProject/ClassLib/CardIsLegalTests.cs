@@ -19,7 +19,7 @@ public class CardIsLegalTests
     }
 
     [Fact]
-    public void IsLegal_EmptyCard_False()
+    public void IsLegal_CardEmpty_False()
     {
         var emptyCard = new Card();
 
@@ -28,8 +28,17 @@ public class CardIsLegalTests
         Assert.False(actual);
     }
 
+
     [Fact]
-    public void IsLegal_NullCost_False()
+    public void IsLegal_CardFull_True()
+    {
+        var actual = _character.IsLegal();
+
+        Assert.True(actual);
+    }
+
+    [Fact]
+    public void IsLegal_CostNull_False()
     {
         _character.Cost = null;
 
@@ -39,7 +48,7 @@ public class CardIsLegalTests
     }
 
     [Fact]
-    public void IsLegal_NullInkable_False()
+    public void IsLegal_InkableNull_False()
     {
         _character.Inkable = null;
 
@@ -49,17 +58,7 @@ public class CardIsLegalTests
     }
 
     [Fact]
-    public void IsLegal_NullName_False()
-    {
-        _character.Name = null;
-
-        var actual = _character.IsLegal();
-
-        Assert.False(actual);
-    }
-
-    [Fact]
-    public void IsLegal_EmptyName_False()
+    public void IsLegal_NameEmpty_False()
     {
         _character.Name = "";
 
@@ -69,7 +68,17 @@ public class CardIsLegalTests
     }
 
     [Fact]
-    public void IsLegal_WhitespaceName_False()
+    public void IsLegal_NameNull_False()
+    {
+        _character.Name = null;
+
+        var actual = _character.IsLegal();
+
+        Assert.False(actual);
+    }
+
+    [Fact]
+    public void IsLegal_NameWhitespace_False()
     {
         _character.Name = " ";
 
@@ -79,27 +88,7 @@ public class CardIsLegalTests
     }
 
     [Fact]
-    public void IsLegal_NullType_False()
-    {
-        _character.Type = null;
-
-        var actual = _character.IsLegal();
-
-        Assert.False(actual);
-    }
-
-    [Fact]
-    public void IsLegal_CharacterNullVersion_False()
-    {
-        _character.Version = null;
-
-        var actual = _character.IsLegal();
-
-        Assert.False(actual);
-    }
-
-    [Fact]
-    public void IsLegal_CharacterEmptyVersion_False()
+    public void IsLegal_TypeCharacterEmptyVersion_False()
     {
         _character.Version = "";
 
@@ -109,7 +98,17 @@ public class CardIsLegalTests
     }
 
     [Fact]
-    public void IsLegal_CharacterWhitespaceVersion_False()
+    public void IsLegal_TypeCharacterNullVersion_False()
+    {
+        _character.Version = null;
+
+        var actual = _character.IsLegal();
+
+        Assert.False(actual);
+    }
+
+    [Fact]
+    public void IsLegal_TypeCharacterWhitespaceVersion_False()
     {
         _character.Version = " ";
 
@@ -119,10 +118,12 @@ public class CardIsLegalTests
     }
 
     [Fact]
-    public void IsLegal_FullCard_True()
+    public void IsLegal_TypeNull_False()
     {
+        _character.Type = null;
+
         var actual = _character.IsLegal();
 
-        Assert.True(actual);
+        Assert.False(actual);
     }
 }
