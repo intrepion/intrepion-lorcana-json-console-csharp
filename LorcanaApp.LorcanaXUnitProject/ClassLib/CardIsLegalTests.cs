@@ -88,6 +88,12 @@ public class CardIsLegalTests
     }
 
     [Fact]
+    public void IsLegal_TypeCharacterStrengthNull_False()
+    {
+        _character.Strength = null;
+    }
+
+    [Fact]
     public void IsLegal_TypeCharacterVersionEmpty_False()
     {
         _character.Version = "";
