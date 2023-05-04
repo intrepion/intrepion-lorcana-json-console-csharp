@@ -52,6 +52,11 @@ public class Card
 
     public bool IsLegal()
     {
+        if (Classifications == null)
+        {
+            return false;
+        }
+
         if (Cost == null)
         {
             return false;
