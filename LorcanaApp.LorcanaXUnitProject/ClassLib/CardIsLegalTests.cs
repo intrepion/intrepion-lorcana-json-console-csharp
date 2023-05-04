@@ -27,6 +27,12 @@ public class CardIsLegalTests
     }
 
     [Fact]
+    public void IsLegal_NullInkable_False()
+    {
+        _character.Inkable = null;
+    }
+
+    [Fact]
     public void IsLegal_NullName_False()
     {
         _character.Name = null;
