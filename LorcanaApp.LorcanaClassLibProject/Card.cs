@@ -104,6 +104,13 @@ public class Card
                 return false;
             }
         }
+        else if (Type == CardType.Item)
+        {
+            if (Classifications.Contains(Classification.Item) == false)
+            {
+                return false;
+            }
+        }
 
         return true;
     }
