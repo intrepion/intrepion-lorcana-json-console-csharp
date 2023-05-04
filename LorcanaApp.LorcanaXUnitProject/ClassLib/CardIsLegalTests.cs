@@ -10,6 +10,7 @@ public class CardIsLegalTests
     {
         _character = new Card
         {
+            Cost = 4,
             Inkable = true,
             Name = "Ariel",
             Type = CardType.Character,
