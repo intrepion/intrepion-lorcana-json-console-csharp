@@ -31,6 +31,10 @@ public class CardIsLegalTests
     public void IsLegal_NullInkable_False()
     {
         _character.Inkable = null;
+
+        var actual = _character.IsLegal();
+
+        Assert.False(actual);
     }
 
     [Fact]
