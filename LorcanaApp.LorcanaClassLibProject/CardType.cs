@@ -5,4 +5,5 @@ public enum CardType
     Action,
     Character,
     Item,
+    Song,
 }

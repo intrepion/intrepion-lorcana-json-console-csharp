@@ -7,6 +7,7 @@ public class CardIsLegalTests
     private Card _action { get; set; }
     private Card _character { get; set; }
     private Card _item { get; set; }
+    private Card _song { get; set; }
 
     public CardIsLegalTests()
     {
@@ -50,6 +51,19 @@ public class CardIsLegalTests
             InkwellIcon = true,
             Name = "DINGLEHOPPER",
             Type = CardType.Item,
+        };
+
+        _song = new Card
+        {
+            Classifications = new List<Classification>
+            {
+                Classification.Action,
+                Classification.Song,
+            },
+            Cost = 2,
+            InkwellIcon = false,
+            Name = "ONE JUMP AHEAD",
+            Type = CardType.Song,
         };
     }
 

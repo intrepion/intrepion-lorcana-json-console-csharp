@@ -6,5 +6,6 @@ public enum Classification
     Hero,
     Item,
     Princess,
+    Song,
     Storyborn,
 }
