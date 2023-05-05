@@ -70,9 +70,28 @@ public class Card
             new Card(),
         };
 
-    public static Card? GetCard(string name, string version)
+    public static Card GetCard(string name, string version)
     {
-        return AllCards.FirstOrDefault(c => c.Name == name && c.Version == version);
+        var card = AllCards.FirstOrDefault(c => c.Name == name && c.Version == version);
+
+        if (card == null)
+        {
+            return new Card();
+        }
+
+        return new Card
+        {
+            Classifications = card.Classifications,
+            Cost = card.Cost,
+            Ink = card.Ink,
+            InkwellIcon = card.InkwellIcon,
+            LoreValue = card.LoreValue,
+            Name = card.Name,
+            Strength = card.Strength,
+            Type = card.Type,
+            Version = card.Version,
+            Willpower = card.Willpower,
+        };
     }
 
     public bool IsLegal()

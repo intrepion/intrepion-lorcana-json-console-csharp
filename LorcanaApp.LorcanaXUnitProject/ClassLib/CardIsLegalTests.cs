@@ -21,24 +21,7 @@ public class CardIsLegalTests
             Type = CardType.Action,
         };
 
-        _character = new Card
-        {
-            Classifications = new List<Classification>
-            {
-                Classification.Hero,
-                Classification.Princess,
-                Classification.Storyborn,
-            },
-            Cost = 4,
-            Ink = InkType.Amber,
-            InkwellIcon = true,
-            LoreValue = 2,
-            Name = "ARIEL",
-            Strength = 3,
-            Type = CardType.Character,
-            Version = "On Human Legs",
-            Willpower = 4,
-        };
+        _character = Card.GetCard("ARIEL", "On Human Legs");
 
         _item = new Card
         {
