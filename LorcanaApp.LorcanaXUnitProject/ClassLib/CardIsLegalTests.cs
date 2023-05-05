@@ -20,7 +20,7 @@ public class CardIsLegalTests
             Cost = 4,
             Inkable = true,
             LoreValue = 2,
-            Name = "Ariel",
+            Name = "ARIEL",
             Strength = 3,
             Type = CardType.Character,
             Version = "On Human Legs",
@@ -35,7 +35,7 @@ public class CardIsLegalTests
             },
             Cost = 1,
             Inkable = true,
-            Name = "Dinglehopper",
+            Name = "DINGLEHOPPER",
             Type = CardType.Item,
         };
     }

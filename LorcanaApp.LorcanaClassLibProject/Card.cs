@@ -77,6 +77,11 @@ public class Card
             return false;
         }
 
+        if (Name.CompareTo(Name.ToUpperInvariant()) != 0)
+        {
+            return false;
+        }
+
         if (Type == null)
         {
             return false;
