@@ -155,7 +155,14 @@ public class CardIsLegalTests
     [Fact]
     public void IsLegal_TypeActionClassificiationNoAction_False()
     {
-        _action.Classifications = new List<Classification>();
+        _action.Classifications = new List<Classification>
+        {
+            Classification.Item,
+        };
+
+        var actual = _action.IsLegal();
+
+        Assert.False(actual);
     }
 
     [Fact]
