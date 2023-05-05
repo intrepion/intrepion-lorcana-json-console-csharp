@@ -14,7 +14,24 @@ public class Card
     public int? Willpower { get; set; }
 
     public static List<Card> AllCards { get; } = new List<Card>{
-        new Card(),
+        new Card
+        {
+            Classifications = new List<Classification>
+            {
+                Classification.Hero,
+                Classification.Princess,
+                Classification.Storyborn,
+            },
+            Cost = 4,
+            Ink = InkType.Amber,
+            InkwellIcon = true,
+            LoreValue = 2,
+            Name = "ARIEL",
+            Strength = 3,
+            Type = CardType.Character,
+            Version = "On Human Legs",
+            Willpower = 4,
+        },
         new Card(),
         new Card(),
         new Card(),
