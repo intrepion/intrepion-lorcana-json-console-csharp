@@ -87,7 +87,14 @@ public class Card
             return false;
         }
 
-        if (Type == CardType.Character)
+        if (Type == CardType.Action)
+        {
+            if (Classifications.Contains(Classification.Action) == false)
+            {
+                return false;
+            }
+        }
+        else if (Type == CardType.Character)
         {
             if (LoreValue == null)
             {
