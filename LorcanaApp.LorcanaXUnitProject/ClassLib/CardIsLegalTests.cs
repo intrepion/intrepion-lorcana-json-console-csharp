@@ -18,7 +18,7 @@ public class CardIsLegalTests
                 Classification.Storyborn,
             },
             Cost = 4,
-            Inkable = true,
+            InkwellIcon = true,
             LoreValue = 2,
             Name = "ARIEL",
             Strength = 3,
@@ -34,7 +34,7 @@ public class CardIsLegalTests
                 Classification.Item,
             },
             Cost = 1,
-            Inkable = true,
+            InkwellIcon = true,
             Name = "DINGLEHOPPER",
             Type = CardType.Item,
         };
@@ -90,9 +90,9 @@ public class CardIsLegalTests
     }
 
     [Fact]
-    public void IsLegal_InkableNull_False()
+    public void IsLegal_InkwellIconNull_False()
     {
-        _character.Inkable = null;
+        _character.InkwellIcon = null;
 
         var actual = _character.IsLegal();
 

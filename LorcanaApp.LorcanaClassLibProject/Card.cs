@@ -4,7 +4,7 @@ public class Card
 {
     public List<Classification>? Classifications { get; set; }
     public int? Cost { get; set; }
-    public bool? Inkable { get; set; }
+    public bool? InkwellIcon { get; set; }
     public int? LoreValue { get; set; }
     public string? Name { get; set; }
     public int? Strength { get; set; }
@@ -67,7 +67,7 @@ public class Card
             return false;
         }
 
-        if (Inkable == null)
+        if (InkwellIcon == null)
         {
             return false;
         }
