@@ -238,6 +238,13 @@ public class CardIsLegalTests
         Assert.False(actual);
     }
 
+
+    [Fact]
+    public void IsLegal_TypeSongClassificationNoAction_False()
+    {
+        _song.Classifications = new List<Classification>();
+    }
+
     [Fact]
     public void IsLegal_TypeNull_False()
     {
