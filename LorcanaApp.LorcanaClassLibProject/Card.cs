@@ -123,6 +123,13 @@ public class Card
                 return false;
             }
         }
+        else if (Type == CardType.Song)
+        {
+            if (Classifications.Contains(Classification.Action) == false)
+            {
+                return false;
+            }
+        }
 
         return true;
     }
