@@ -4,6 +4,7 @@ public class Card
 {
     public List<Classification>? Classifications { get; set; }
     public int? Cost { get; set; }
+    public InkType? Ink { get; set; }
     public bool? InkwellIcon { get; set; }
     public int? LoreValue { get; set; }
     public string? Name { get; set; }
