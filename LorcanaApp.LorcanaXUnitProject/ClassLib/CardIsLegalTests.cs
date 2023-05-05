@@ -4,11 +4,24 @@ namespace LorcanaApp.LorcanaXUnitProject.ClassLib;
 
 public class CardIsLegalTests
 {
+    private Card _action { get; set; }
     private Card _character { get; set; }
     private Card _item { get; set; }
 
     public CardIsLegalTests()
     {
+        _action = new Card
+        {
+            Classifications = new List<Classification>
+            {
+                Classification.Action,
+            },
+            Cost = 1,
+            InkwellIcon = true,
+            Name = "CONTROL YOUR TEMPER",
+            Type = CardType.Action,
+        };
+
         _character = new Card
         {
             Classifications = new List<Classification>
