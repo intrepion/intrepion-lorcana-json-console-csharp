@@ -13,10 +13,7 @@ public class CardIsLegalTests
     {
         _action = new Card
         {
-            Classifications = new List<Classification>
-            {
-                Classification.Action,
-            },
+            Classifications = new List<Classification> { Classification.Action, },
             Cost = 1,
             Ink = InkType.Amber,
             InkwellIcon = true,
@@ -45,10 +42,7 @@ public class CardIsLegalTests
 
         _item = new Card
         {
-            Classifications = new List<Classification>
-            {
-                Classification.Item,
-            },
+            Classifications = new List<Classification> { Classification.Item, },
             Cost = 1,
             Ink = InkType.Amber,
             InkwellIcon = true,
@@ -80,7 +74,6 @@ public class CardIsLegalTests
 
         Assert.False(actual);
     }
-
 
     [Fact]
     public void IsLegal_CardFull_True()
@@ -183,10 +176,7 @@ public class CardIsLegalTests
     [Fact]
     public void IsLegal_TypeActionClassificiationNoAction_False()
     {
-        _action.Classifications = new List<Classification>
-        {
-            Classification.Item,
-        };
+        _action.Classifications = new List<Classification> { Classification.Item, };
 
         var actual = _action.IsLegal();
 
@@ -256,24 +246,17 @@ public class CardIsLegalTests
     [Fact]
     public void IsLegal_TypeItemClassificationNoItem_False()
     {
-        _item.Classifications = new List<Classification>
-        {
-            Classification.Action,
-        };
+        _item.Classifications = new List<Classification> { Classification.Action, };
 
         var actual = _item.IsLegal();
 
         Assert.False(actual);
     }
 
-
     [Fact]
     public void IsLegal_TypeSongClassificationNoAction_False()
     {
-        _song.Classifications = new List<Classification>
-        {
-            Classification.Song,
-        };
+        _song.Classifications = new List<Classification> { Classification.Song, };
 
         var actual = _song.IsLegal();
 
@@ -283,10 +266,7 @@ public class CardIsLegalTests
     [Fact]
     public void IsLegal_TypeSongClassificationNoSong_False()
     {
-        _song.Classifications = new List<Classification>
-        {
-            Classification.Action,
-        };
+        _song.Classifications = new List<Classification> { Classification.Action, };
 
         var actual = _song.IsLegal();
 

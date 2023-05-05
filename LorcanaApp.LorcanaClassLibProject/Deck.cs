@@ -7,7 +7,5 @@ public class Deck
         return Card.AllCards;
     }
 
-    public void GetLegalFormats()
-    {
-    }
+    public void GetLegalFormats() { }
 }

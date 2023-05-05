@@ -7,7 +7,5 @@ public class Game
         return new List<int>();
     }
 
-    public void AddPlayer()
-    {
-    }
+    public void AddPlayer() { }
 }

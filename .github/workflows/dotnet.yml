@@ -15,8 +15,10 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 7.0.x
+      - name: Tool restore
+        run: dotnet tool restore
       - name: Check formattings
-        run: dotnet format --verify-no-changes
+        run: dotnet csharpier --check
       - name: Restore dependencies
         run: dotnet restore
       - name: Build
