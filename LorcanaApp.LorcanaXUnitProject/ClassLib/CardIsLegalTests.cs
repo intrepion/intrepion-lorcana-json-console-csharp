@@ -256,7 +256,14 @@ public class CardIsLegalTests
     [Fact]
     public void IsLegal_TypeSongClassificationNoAction_False()
     {
-        _song.Classifications = new List<Classification>();
+        _song.Classifications = new List<Classification>
+        {
+            Classification.Song,
+        };
+
+        var actual = _song.IsLegal();
+
+        Assert.False(actual);
     }
 
     [Fact]
