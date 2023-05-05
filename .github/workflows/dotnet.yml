@@ -15,8 +15,8 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 7.0.x
-      - name: Tool restore
-        run: dotnet tool restore
+      - name: Install CSharpier
+        run: dotnet tool install --global csharpier
       - name: Check formattings
         run: dotnet csharpier --check
       - name: Restore dependencies
