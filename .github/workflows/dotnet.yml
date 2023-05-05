@@ -16,7 +16,7 @@ jobs:
         with:
           dotnet-version: 7.0.x
       - name: Install CSharpier
-        run: dotnet tool install --global csharpier
+        run: dotnet tool install csharpier --global
       - name: Check formattings
         run: dotnet csharpier --check
       - name: Restore dependencies
