@@ -51,6 +51,11 @@ public class Card
         new Card(),
     };
 
+    public static Card? GetCard(string name, string version)
+    {
+        return AllCards.FirstOrDefault(c => c.Name == name && c.Version == version);
+    }
+
     public bool IsLegal()
     {
         if (Classifications == null)
