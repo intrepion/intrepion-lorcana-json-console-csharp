@@ -68,6 +68,11 @@ public class Card
             return false;
         }
 
+        if (Ink == null)
+        {
+            return false;
+        }
+
         if (InkwellIcon == null)
         {
             return false;
