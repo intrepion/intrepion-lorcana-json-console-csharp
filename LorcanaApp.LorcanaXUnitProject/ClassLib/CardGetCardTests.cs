@@ -5,9 +5,10 @@ namespace LorcanaApp.LorcanaXUnitProject.ClassLib;
 public class CardGetCardTests
 {
     [Fact]
-    public void GetCard_Ariel_Ariel()
+    public void GetCard_ArielOnHumanLegs_NotNull()
     {
-        var expected = "On Human Legs";
-        var card = Card.GetCard("ARIEL", "On Human Legs");
+        var actual = Card.GetCard("ARIEL", "On Human Legs");
+
+        Assert.NotNull(actual);
     }
 }
