@@ -129,6 +129,11 @@ public class Card
             {
                 return false;
             }
+
+            if (Classifications.Contains(Classification.Song) == false)
+            {
+                return false;
+            }
         }
 
         return true;
