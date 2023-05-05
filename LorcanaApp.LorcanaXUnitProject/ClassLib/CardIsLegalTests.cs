@@ -140,6 +140,12 @@ public class CardIsLegalTests
     }
 
     [Fact]
+    public void IsLegal_TypeActionClassificiationNoAction_False()
+    {
+        _action.Classifications = new List<Classification>();
+    }
+
+    [Fact]
     public void IsLegal_TypeCharacterLoreValueNull_False()
     {
         _character.LoreValue = null;
