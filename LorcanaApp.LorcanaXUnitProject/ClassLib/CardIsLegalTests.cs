@@ -117,6 +117,12 @@ public class CardIsLegalTests
     }
 
     [Fact]
+    public void IsLegal_InkNull_False()
+    {
+        _character.Ink = null;
+    }
+
+    [Fact]
     public void IsLegal_InkwellIconNull_False()
     {
         _character.InkwellIcon = null;
