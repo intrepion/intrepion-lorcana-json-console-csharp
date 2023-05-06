@@ -11,41 +11,13 @@ public class CardIsLegalTests
 
     public CardIsLegalTests()
     {
-        _action = new Card
-        {
-            Classifications = new List<Classification> { Classification.Action, },
-            Cost = 1,
-            Ink = InkType.Amber,
-            InkwellIcon = true,
-            Name = "CONTROL YOUR TEMPER",
-            Type = CardType.Action,
-        };
+        _action = Card.GetCard("CONTROL YOUR TEMPER!", null);
 
         _character = Card.GetCard("ARIEL", "On Human Legs");
 
-        _item = new Card
-        {
-            Classifications = new List<Classification> { Classification.Item, },
-            Cost = 1,
-            Ink = InkType.Amber,
-            InkwellIcon = true,
-            Name = "DINGLEHOPPER",
-            Type = CardType.Item,
-        };
+        _item = Card.GetCard("DINGLEHOPPER", null);
 
-        _song = new Card
-        {
-            Classifications = new List<Classification>
-            {
-                Classification.Action,
-                Classification.Song,
-            },
-            Cost = 2,
-            Ink = InkType.Sapphire,
-            InkwellIcon = false,
-            Name = "ONE JUMP AHEAD",
-            Type = CardType.Song,
-        };
+        _song = Card.GetCard("ONE JUMP AHEAD", null);
     }
 
     [Fact]

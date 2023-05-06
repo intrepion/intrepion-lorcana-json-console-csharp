@@ -34,9 +34,37 @@ public class Card
                 Version = "On Human Legs",
                 Willpower = 4,
             },
-            new Card(),
-            new Card(),
-            new Card(),
+            new Card
+            {
+                Classifications = new List<Classification> { Classification.Action, },
+                Cost = 1,
+                Ink = InkType.Amber,
+                InkwellIcon = true,
+                Name = "CONTROL YOUR TEMPER",
+                Type = CardType.Action,
+            },
+            new Card
+            {
+                Classifications = new List<Classification> { Classification.Item, },
+                Cost = 1,
+                Ink = InkType.Amber,
+                InkwellIcon = true,
+                Name = "DINGLEHOPPER",
+                Type = CardType.Item,
+            },
+            new Card
+            {
+                Classifications = new List<Classification>
+                {
+                    Classification.Action,
+                    Classification.Song,
+                },
+                Cost = 2,
+                Ink = InkType.Sapphire,
+                InkwellIcon = false,
+                Name = "ONE JUMP AHEAD",
+                Type = CardType.Song,
+            },
             new Card(),
             new Card(),
             new Card(),
@@ -70,7 +98,7 @@ public class Card
             new Card(),
         };
 
-    public static Card GetCard(string name, string version)
+    public static Card GetCard(string name, string? version)
     {
         var card = AllCards.FirstOrDefault(c => c.Name == name && c.Version == version);
 
