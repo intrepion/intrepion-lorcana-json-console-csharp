@@ -130,6 +130,19 @@ public class Card
             },
             new Card
             {
+                Classifications = new List<Classification> { Classification.Storyborn, },
+                Cost = 3,
+                Ink = InkType.Emerald,
+                InkwellIcon = true,
+                LoreValue = 2,
+                Name = "CHESHIRE CAT",
+                Strength = 0,
+                Type = CardType.Character,
+                Version = "Not All There",
+                Willpower = 3,
+            },
+            new Card
+            {
                 Classifications = new List<Classification> { Classification.Item },
                 Cost = 2,
                 Ink = InkType.Sapphire,

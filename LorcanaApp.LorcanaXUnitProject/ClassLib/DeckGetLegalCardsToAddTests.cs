@@ -7,7 +7,7 @@ public class DeckGetLegalCardsToAddTests
     [Fact]
     public void GetLegalCardsToAdd_FormatDemo_AllCards()
     {
-        var expected = 35;
+        var expected = 36;
         var deck = new Deck();
 
         var cards = deck.GetLegalCardsToAdd(Format.Demo);
@@ -19,7 +19,7 @@ public class DeckGetLegalCardsToAddTests
     [Fact]
     public void GetLegalCardsToAdd_FormatDemoCards3Same1Card_AllCardsMinus1()
     {
-        var expected = 34;
+        var expected = 35;
         var deck = new Deck();
         var card = Card.GetCard("AURORA", "Briar Rose");
 

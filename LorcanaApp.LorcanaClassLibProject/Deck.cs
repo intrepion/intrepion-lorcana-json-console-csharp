@@ -22,6 +22,11 @@ public class Deck
 
         List<Card> legalCards;
 
+        if (inkTypes.Count > 2)
+        {
+            return new List<Card>();
+        }
+
         if (inkTypes.Count == 2)
         {
             legalCards = Card.AllCards
