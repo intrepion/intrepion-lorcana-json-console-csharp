@@ -34,6 +34,24 @@ public class DeckGetLegalCardsToAddTests
     }
 
     [Fact]
+    public void GetLegalCardsToAdd_FormatDemoCards4Same1Card_NoCards()
+    {
+        var expected = 0;
+        var deck = new Deck();
+        var card = Card.GetCard("AURORA", "Briar Rose");
+
+        deck.AddCard(card);
+        deck.AddCard(card);
+        deck.AddCard(card);
+        deck.AddCard(card);
+
+        var cards = deck.GetLegalCardsToAdd(Format.Demo);
+        var actual = cards.Count;
+
+        Assert.Equal(expected, actual);
+    }
+
+    [Fact]
     public void GetLegalCardsToAdd_FormatDemoCards6Same2Cards2Colors_AllCardsMinus1()
     {
         var expected = 16;
