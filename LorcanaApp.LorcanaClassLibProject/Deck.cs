@@ -11,7 +11,10 @@ public class Deck
 
     public List<Card> GetLegalCardsToAdd(Format format)
     {
-        return Card.AllCards;
+        var legalCards = Card.AllCards
+            .Where(c1 => _cards.FindAll(c2 => c1 == c2).Count < 3)
+            .ToList();
+        return legalCards;
     }
 
     public void GetLegalFormats() { }

@@ -21,9 +21,8 @@ public class DeckGetLegalCardsToAddTests
     {
         var expected = 34;
         var deck = new Deck();
-        var card = Card.GetCard("ARIEL", "On Human Legs");
+        var card = Card.GetCard("AURORA", "Briar Rose");
 
-        deck.AddCard(card);
         deck.AddCard(card);
         deck.AddCard(card);
         deck.AddCard(card);
