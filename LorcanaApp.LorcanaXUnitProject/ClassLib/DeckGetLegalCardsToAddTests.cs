@@ -24,5 +24,13 @@ public class DeckGetLegalCardsToAddTests
         var card = Card.GetCard("ARIEL", "On Human Legs");
 
         deck.AddCard(card);
+        deck.AddCard(card);
+        deck.AddCard(card);
+        deck.AddCard(card);
+
+        var cards = deck.GetLegalCardsToAdd(Format.Demo);
+        var actual = cards.Count;
+
+        Assert.Equal(expected, actual);
     }
 }
