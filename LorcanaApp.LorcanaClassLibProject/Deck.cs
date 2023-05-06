@@ -11,6 +11,11 @@ public class Deck
 
     public List<Card> GetLegalCardsToAdd(Format format)
     {
+        if (Card.AllCards.Any(c1 => _cards.FindAll(c2 => c1 == c2).Count > 3))
+        {
+            return new List<Card>();
+        }
+
         var inkTypes = new List<InkType>();
         _cards.ForEach(c =>
         {
@@ -20,12 +25,12 @@ public class Deck
             }
         });
 
-        List<Card> legalCards;
-
         if (inkTypes.Count > 2)
         {
             return new List<Card>();
         }
+
+        List<Card> legalCards;
 
         if (inkTypes.Count == 2)
         {
