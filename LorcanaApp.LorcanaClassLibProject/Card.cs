@@ -13,8 +13,11 @@ public class Card
     public string? Version { get; set; }
     public int? Willpower { get; set; }
 
-    public static List<Card> AllCards { get; } =
-        new List<Card>
+    public static List<Card> AllCards { get; set; }
+
+    static Card()
+    {
+        AllCards = new List<Card>
         {
             new Card
             {
@@ -97,28 +100,42 @@ public class Card
             new Card(),
             new Card(),
         };
+    }
 
     public static Card GetCard(string name, string? version)
     {
-        var card = AllCards.FirstOrDefault(c => c.Name == name && c.Version == version);
+        Card? card;
+        if (String.IsNullOrWhiteSpace(version))
+        {
+            card = AllCards.FirstOrDefault(c => name.Equals(c.Name));
+        }
+        else
+        {
+            card = AllCards.FirstOrDefault(c => name.Equals(c.Name) && version.Equals(c.Version));
+        }
 
         if (card == null)
         {
             return new Card();
         }
 
+        return card;
+    }
+
+    public Card Clone()
+    {
         return new Card
         {
-            Classifications = card.Classifications,
-            Cost = card.Cost,
-            Ink = card.Ink,
-            InkwellIcon = card.InkwellIcon,
-            LoreValue = card.LoreValue,
-            Name = card.Name,
-            Strength = card.Strength,
-            Type = card.Type,
-            Version = card.Version,
-            Willpower = card.Willpower,
+            Classifications = Classifications,
+            Cost = Cost,
+            Ink = Ink,
+            InkwellIcon = InkwellIcon,
+            LoreValue = LoreValue,
+            Name = Name,
+            Strength = Strength,
+            Type = Type,
+            Version = Version,
+            Willpower = Willpower,
         };
     }
 

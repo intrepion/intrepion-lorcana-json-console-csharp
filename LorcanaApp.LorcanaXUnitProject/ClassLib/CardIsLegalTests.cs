@@ -11,13 +11,13 @@ public class CardIsLegalTests
 
     public CardIsLegalTests()
     {
-        _action = Card.GetCard("CONTROL YOUR TEMPER!", null);
+        _action = Card.GetCard("CONTROL YOUR TEMPER!", null).Clone();
 
-        _character = Card.GetCard("ARIEL", "On Human Legs");
+        _character = Card.GetCard("ARIEL", "On Human Legs").Clone();
 
-        _item = Card.GetCard("DINGLEHOPPER", null);
+        _item = Card.GetCard("DINGLEHOPPER", null).Clone();
 
-        _song = Card.GetCard("ONE JUMP AHEAD", null);
+        _song = Card.GetCard("ONE JUMP AHEAD", null).Clone();
     }
 
     [Fact]
