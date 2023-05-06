@@ -377,7 +377,7 @@ public class Card
                     Classification.Dreamborn,
                 },
                 Cost = 3,
-                Ink = InkType.Steel,
+                Ink = InkType.Amber,
                 InkwellIcon = true,
                 LoreValue = 1,
                 Name = "MAXIMUS",
