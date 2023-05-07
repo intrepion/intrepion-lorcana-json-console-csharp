@@ -30,6 +30,19 @@ public class DeckGetLegalFormatsTests
     }
 
     [Fact]
+    public void GetLegalFormats_DeckDemoCards4Unique1_EmptyList()
+    {
+        var expected = 0;
+        var deck = Deck.GetDeck(Format.Demo, "GAMA 2023 - Amber / Amethyst");
+
+        deck.AddCard(Card.GetCard("ARIEL", "On Human Legs"));
+        var formats = deck.GetLegalFormats();
+        var actual = formats.Count;
+
+        Assert.Equal(expected, actual);
+    }
+
+    [Fact]
     public void GetLegalFormats_DeckDemo_FormatDemo()
     {
         var expected = 1;
