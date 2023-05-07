@@ -57,5 +57,8 @@ public class DeckGetLegalFormatsTests
         deck.AddCard(Card.GetCard("FRYING PAN", null));
 
         var formats = deck.GetLegalFormats();
+        var actual = formats.Count;
+
+        Assert.Equal(expected, actual);
     }
 }
