@@ -2,6 +2,7 @@ namespace LorcanaApp.LorcanaClassLibProject;
 
 public class Card
 {
+    public static List<Card> AllCards { get; set; }
     public List<Classification>? Classifications { get; set; }
     public int? Cost { get; set; }
     public InkType? Ink { get; set; }
@@ -12,8 +13,6 @@ public class Card
     public CardType? Type { get; set; }
     public string? Version { get; set; }
     public int? Willpower { get; set; }
-
-    public static List<Card> AllCards { get; set; }
 
     static Card()
     {
