@@ -1,16 +1,16 @@
 namespace LorcanaApp.LorcanaClassLibProject;
 
-public class Deck
+public class DeckList
 {
     private List<Glimmer> _glimmers { get; set; } = new List<Glimmer>();
-    public static List<Deck> AllDecks { get; set; }
+    public static List<DeckList> AllDeckLists { get; set; }
     public string? Name { get; set; }
 
-    static Deck()
+    static DeckList()
     {
-        AllDecks = new List<Deck>();
+        AllDeckLists = new List<DeckList>();
 
-        var gama2023SapphireSteel = new Deck();
+        var gama2023SapphireSteel = new DeckList();
         gama2023SapphireSteel.Name = "GAMA 2023 - Sapphire / Steel";
         gama2023SapphireSteel.AddGlimmer(Glimmer.GetGlimmer("GOONS", "Maleficent's Underlings"));
         gama2023SapphireSteel.AddGlimmer(Glimmer.GetGlimmer("GOONS", "Maleficent's Underlings"));
@@ -53,9 +53,9 @@ public class Deck
         gama2023SapphireSteel.AddGlimmer(Glimmer.GetGlimmer("COCONUT BASKET", null));
         gama2023SapphireSteel.AddGlimmer(Glimmer.GetGlimmer("COCONUT BASKET", null));
 
-        AllDecks.Add(gama2023SapphireSteel);
+        AllDeckLists.Add(gama2023SapphireSteel);
 
-        var gama2023AmberAmethyst = new Deck();
+        var gama2023AmberAmethyst = new DeckList();
 
         gama2023AmberAmethyst.Name = "GAMA 2023 - Amber / Amethyst";
         gama2023AmberAmethyst.AddGlimmer(Glimmer.GetGlimmer("OLAF", "Friendly Snowman"));
@@ -99,19 +99,21 @@ public class Deck
         gama2023AmberAmethyst.AddGlimmer(Glimmer.GetGlimmer("FRIENDS ON THE OTHER SIDE", null));
         gama2023AmberAmethyst.AddGlimmer(Glimmer.GetGlimmer("FRIENDS ON THE OTHER SIDE", null));
 
-        AllDecks.Add(gama2023AmberAmethyst);
+        AllDeckLists.Add(gama2023AmberAmethyst);
     }
 
-    public static Deck GetDeck(Format format, string name)
+    public static DeckList GetDeckList(Format format, string name)
     {
-        var deck = AllDecks.Find(d => d.Name == name && d.GetLegalFormats().Contains(format));
+        var deckList = AllDeckLists.Find(
+            d => d.Name == name && d.GetLegalFormats().Contains(format)
+        );
 
-        if (deck == null)
+        if (deckList == null)
         {
-            return new Deck();
+            return new DeckList();
         }
 
-        return deck;
+        return deckList;
     }
 
     public void AddGlimmer(Glimmer glimmer)
@@ -119,12 +121,12 @@ public class Deck
         _glimmers.Add(glimmer);
     }
 
-    public Deck Clone()
+    public DeckList Clone()
     {
-        var deck = new Deck();
-        deck.Name = Name;
-        deck._glimmers = new List<Glimmer>(_glimmers);
-        return deck;
+        var deckList = new DeckList();
+        deckList.Name = Name;
+        deckList._glimmers = new List<Glimmer>(_glimmers);
+        return deckList;
     }
 
     public List<Glimmer> GetLegalGlimmersToAdd(Format format)
