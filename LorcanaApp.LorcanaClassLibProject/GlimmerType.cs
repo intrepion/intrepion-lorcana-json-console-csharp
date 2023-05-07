@@ -1,6 +1,6 @@
 namespace LorcanaApp.LorcanaClassLibProject;
 
-public enum CardType
+public enum GlimmerType
 {
     Action,
     Character,

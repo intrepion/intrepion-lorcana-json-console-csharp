@@ -2,91 +2,91 @@ using LorcanaApp.LorcanaClassLibProject;
 
 namespace LorcanaApp.LorcanaXUnitProject.ClassLib;
 
-public class DeckGetLegalCardsToAddTests
+public class DeckGetLegalGlimmersToAddTests
 {
     [Fact]
-    public void GetLegalCardsToAdd_FormatDemoNoCards_AllCards()
+    public void GetLegalGlimmersToAdd_FormatDemoNoGlimmers_AllGlimmers()
     {
         var expected = 36;
         var deck = new Deck();
 
-        var cards = deck.GetLegalCardsToAdd(Format.Demo);
-        var actual = cards.Count;
+        var glimmers = deck.GetLegalGlimmersToAdd(Format.Demo);
+        var actual = glimmers.Count;
 
         Assert.Equal(expected, actual);
     }
 
     [Fact]
-    public void GetLegalCardsToAdd_FormatDemoCards3Unique1_AllCardsMinus1()
+    public void GetLegalGlimmersToAdd_FormatDemoGlimmers3Unique1_AllGlimmersMinus1()
     {
         var expected = 35;
         var deck = new Deck();
-        var card = Card.GetCard("AURORA", "Briar Rose");
+        var glimmer = Glimmer.GetGlimmer("AURORA", "Briar Rose");
 
-        deck.AddCard(card);
-        deck.AddCard(card);
-        deck.AddCard(card);
+        deck.AddGlimmer(glimmer);
+        deck.AddGlimmer(glimmer);
+        deck.AddGlimmer(glimmer);
 
-        var cards = deck.GetLegalCardsToAdd(Format.Demo);
-        var actual = cards.Count;
+        var glimmers = deck.GetLegalGlimmersToAdd(Format.Demo);
+        var actual = glimmers.Count;
 
         Assert.Equal(expected, actual);
     }
 
     [Fact]
-    public void GetLegalCardsToAdd_FormatDemoCards3Unique3Inks3_NoCards()
+    public void GetLegalGlimmersToAdd_FormatDemoGlimmers3Unique3Inks3_NoGlimmers()
     {
         var expected = 0;
         var deck = new Deck();
-        var card1 = Card.GetCard("AURORA", "Briar Rose");
-        var card2 = Card.GetCard("BEAST", "Hardheaded");
-        var card3 = Card.GetCard("CHESHIRE CAT", "Not All There");
+        var glimmer1 = Glimmer.GetGlimmer("AURORA", "Briar Rose");
+        var glimmer2 = Glimmer.GetGlimmer("BEAST", "Hardheaded");
+        var glimmer3 = Glimmer.GetGlimmer("CHESHIRE CAT", "Not All There");
 
-        deck.AddCard(card1);
-        deck.AddCard(card2);
-        deck.AddCard(card3);
+        deck.AddGlimmer(glimmer1);
+        deck.AddGlimmer(glimmer2);
+        deck.AddGlimmer(glimmer3);
 
-        var cards = deck.GetLegalCardsToAdd(Format.Demo);
-        var actual = cards.Count;
+        var glimmers = deck.GetLegalGlimmersToAdd(Format.Demo);
+        var actual = glimmers.Count;
 
         Assert.Equal(expected, actual);
     }
 
     [Fact]
-    public void GetLegalCardsToAdd_FormatDemoCards4Unique1_NoCards()
+    public void GetLegalGlimmersToAdd_FormatDemoGlimmers4Unique1_NoGlimmers()
     {
         var expected = 0;
         var deck = new Deck();
-        var card = Card.GetCard("AURORA", "Briar Rose");
+        var glimmer = Glimmer.GetGlimmer("AURORA", "Briar Rose");
 
-        deck.AddCard(card);
-        deck.AddCard(card);
-        deck.AddCard(card);
-        deck.AddCard(card);
+        deck.AddGlimmer(glimmer);
+        deck.AddGlimmer(glimmer);
+        deck.AddGlimmer(glimmer);
+        deck.AddGlimmer(glimmer);
 
-        var cards = deck.GetLegalCardsToAdd(Format.Demo);
-        var actual = cards.Count;
+        var glimmers = deck.GetLegalGlimmersToAdd(Format.Demo);
+        var actual = glimmers.Count;
 
         Assert.Equal(expected, actual);
     }
 
     [Fact]
-    public void GetLegalCardsToAdd_FormatDemoCards6Unique2Inks2_AllCardsMinus1()
+    public void GetLegalGlimmersToAdd_FormatDemoGlimmers6Unique2Inks2_AllGlimmersMinus1()
     {
         var expected = 16;
         var deck = new Deck();
-        var card1 = Card.GetCard("AURORA", "Briar Rose");
-        var card2 = Card.GetCard("BEAST", "Hardheaded");
+        var glimmer1 = Glimmer.GetGlimmer("AURORA", "Briar Rose");
+        var glimmer2 = Glimmer.GetGlimmer("BEAST", "Hardheaded");
 
-        deck.AddCard(card1);
-        deck.AddCard(card1);
-        deck.AddCard(card1);
-        deck.AddCard(card2);
-        deck.AddCard(card2);
-        deck.AddCard(card2);
+        deck.AddGlimmer(glimmer1);
+        deck.AddGlimmer(glimmer1);
+        deck.AddGlimmer(glimmer1);
+        deck.AddGlimmer(glimmer2);
+        deck.AddGlimmer(glimmer2);
+        deck.AddGlimmer(glimmer2);
 
-        var cards = deck.GetLegalCardsToAdd(Format.Demo);
-        var actual = cards.Count;
+        var glimmers = deck.GetLegalGlimmersToAdd(Format.Demo);
+        var actual = glimmers.Count;
 
         Assert.Equal(expected, actual);
     }

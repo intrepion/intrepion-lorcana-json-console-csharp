@@ -22,7 +22,7 @@ public class DeckGetLegalFormatsTests
         var expected = 0;
         var deck = Deck.GetDeck(Format.Demo, "GAMA 2023 - Sapphire / Steel").Clone();
 
-        deck.AddCard(Card.GetCard("CHESHIRE CAT", "Not All There"));
+        deck.AddGlimmer(Glimmer.GetGlimmer("CHESHIRE CAT", "Not All There"));
         var formats = deck.GetLegalFormats();
         var actual = formats.Count;
 
@@ -30,12 +30,12 @@ public class DeckGetLegalFormatsTests
     }
 
     [Fact]
-    public void GetLegalFormats_DeckDemoCards4Unique1_EmptyList()
+    public void GetLegalFormats_DeckDemoGlimmers4Unique1_EmptyList()
     {
         var expected = 0;
         var deck = Deck.GetDeck(Format.Demo, "GAMA 2023 - Amber / Amethyst");
 
-        deck.AddCard(Card.GetCard("FRIENDS ON THE OTHER SIDE", null));
+        deck.AddGlimmer(Glimmer.GetGlimmer("FRIENDS ON THE OTHER SIDE", null));
         var formats = deck.GetLegalFormats();
         var actual = formats.Count;
 

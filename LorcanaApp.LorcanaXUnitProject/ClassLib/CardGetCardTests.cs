@@ -2,12 +2,12 @@ using LorcanaApp.LorcanaClassLibProject;
 
 namespace LorcanaApp.LorcanaXUnitProject.ClassLib;
 
-public class CardGetCardTests
+public class GlimmerGetGlimmerTests
 {
     [Fact]
-    public void GetCard_ArielOnHumanLegs_NotNull()
+    public void GetGlimmer_ArielOnHumanLegs_NotNull()
     {
-        var actual = Card.GetCard("ARIEL", "On Human Legs");
+        var actual = Glimmer.GetGlimmer("ARIEL", "On Human Legs");
 
         Assert.NotNull(actual);
     }

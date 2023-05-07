@@ -1,8 +1,8 @@
 namespace LorcanaApp.LorcanaClassLibProject;
 
-public class Card
+public class Glimmer
 {
-    public static List<Card> AllCards { get; set; }
+    public static List<Glimmer> AllGlimmers { get; set; }
     public List<Classification>? Classifications { get; set; }
     public int? Cost { get; set; }
     public InkType? Ink { get; set; }
@@ -10,15 +10,15 @@ public class Card
     public int? LoreValue { get; set; }
     public string? Name { get; set; }
     public int? Strength { get; set; }
-    public CardType? Type { get; set; }
+    public GlimmerType? Type { get; set; }
     public string? Version { get; set; }
     public int? Willpower { get; set; }
 
-    static Card()
+    static Glimmer()
     {
-        AllCards = new List<Card>
+        AllGlimmers = new List<Glimmer>
         {
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -32,11 +32,11 @@ public class Card
                 LoreValue = 2,
                 Name = "ARIEL",
                 Strength = 3,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "On Human Legs",
                 Willpower = 4,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -50,11 +50,11 @@ public class Card
                 LoreValue = 1,
                 Name = "AURORA",
                 Strength = 2,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Briar Rose",
                 Willpower = 5,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -68,11 +68,11 @@ public class Card
                 LoreValue = 2,
                 Name = "AURORA",
                 Strength = 3,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Dreaming Guardian",
                 Willpower = 5,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -86,11 +86,11 @@ public class Card
                 LoreValue = 2,
                 Name = "AURORA",
                 Strength = 2,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Regal Princess",
                 Willpower = 2,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -104,11 +104,11 @@ public class Card
                 LoreValue = 2,
                 Name = "BEAST",
                 Strength = 4,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Hardheaded",
                 Willpower = 4,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -123,11 +123,11 @@ public class Card
                 LoreValue = 1,
                 Name = "CAPTAIN HOOK",
                 Strength = 1,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Forceful Duelist",
                 Willpower = 2,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification> { Classification.Storyborn, },
                 Cost = 3,
@@ -136,47 +136,47 @@ public class Card
                 LoreValue = 2,
                 Name = "CHESHIRE CAT",
                 Strength = 0,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Not All There",
                 Willpower = 3,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification> { Classification.Item },
                 Cost = 2,
                 Ink = InkType.Sapphire,
                 InkwellIcon = true,
                 Name = "COCONUT BASKET",
-                Type = CardType.Item,
+                Type = GlimmerType.Item,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification> { Classification.Action, },
                 Cost = 1,
                 Ink = InkType.Amber,
                 InkwellIcon = true,
                 Name = "CONTROL YOUR TEMPER!",
-                Type = CardType.Action,
+                Type = GlimmerType.Action,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification> { Classification.Action, },
                 Cost = 1,
                 Ink = InkType.Sapphire,
                 InkwellIcon = true,
                 Name = "DEVELOP YOUR BRAIN",
-                Type = CardType.Action,
+                Type = GlimmerType.Action,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification> { Classification.Item, },
                 Cost = 1,
                 Ink = InkType.Amber,
                 InkwellIcon = true,
                 Name = "DINGLEHOPPER",
-                Type = CardType.Item,
+                Type = GlimmerType.Item,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -190,20 +190,20 @@ public class Card
                 LoreValue = 1,
                 Name = "DR. FACILIER",
                 Strength = 0,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Charlatan",
                 Willpower = 4,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification> { Classification.Action },
                 Cost = 1,
                 Ink = InkType.Steel,
                 InkwellIcon = false,
                 Name = "FIRE THE CANNONS!",
-                Type = CardType.Action,
+                Type = GlimmerType.Action,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -216,11 +216,11 @@ public class Card
                 LoreValue = 1,
                 Name = "FLOUNDER",
                 Strength = 2,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Voice of Reason",
                 Willpower = 2,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -231,18 +231,18 @@ public class Card
                 Ink = InkType.Amethyst,
                 InkwellIcon = true,
                 Name = "FRIENDS ON THE OTHER SIDE",
-                Type = CardType.Song,
+                Type = GlimmerType.Song,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification> { Classification.Item, },
                 Cost = 2,
                 Ink = InkType.Steel,
                 InkwellIcon = true,
                 Name = "FRYING PAN",
-                Type = CardType.Item,
+                Type = GlimmerType.Item,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -255,11 +255,11 @@ public class Card
                 LoreValue = 1,
                 Name = "GOONS",
                 Strength = 2,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Maleficent's Underlings",
                 Willpower = 2,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -272,11 +272,11 @@ public class Card
                 LoreValue = 1,
                 Name = "HEIHEI",
                 Strength = 1,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Boat Snack",
                 Willpower = 2,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -290,11 +290,11 @@ public class Card
                 LoreValue = 1,
                 Name = "JAFAR",
                 Strength = 2,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Wicked Sorcerer",
                 Willpower = 5,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -307,11 +307,11 @@ public class Card
                 LoreValue = 2,
                 Name = "JASMINE",
                 Strength = 3,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Disguised",
                 Willpower = 3,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -324,11 +324,11 @@ public class Card
                 LoreValue = 2,
                 Name = "KRISTOFF",
                 Strength = 3,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Official Ice Master",
                 Willpower = 3,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -341,11 +341,11 @@ public class Card
                 LoreValue = 1,
                 Name = "MAGIC BROOM",
                 Strength = 2,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Bucket Brigade",
                 Willpower = 2,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -359,11 +359,11 @@ public class Card
                 LoreValue = 2,
                 Name = "MALEFICENT",
                 Strength = 3,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Sinister Visitor",
                 Willpower = 4,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -377,11 +377,11 @@ public class Card
                 LoreValue = 1,
                 Name = "MALEFICENT",
                 Strength = 2,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Sorceress",
                 Willpower = 2,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -394,11 +394,11 @@ public class Card
                 LoreValue = 1,
                 Name = "MAXIMUS",
                 Strength = 3,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Relentless Pursuer",
                 Willpower = 3,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -411,11 +411,11 @@ public class Card
                 LoreValue = 2,
                 Name = "MICKEY MOUSE",
                 Strength = 3,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "True Friend",
                 Willpower = 3,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -428,11 +428,11 @@ public class Card
                 LoreValue = 1,
                 Name = "MINNIE MOUSE",
                 Strength = 2,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Beloved Princess",
                 Willpower = 3,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -445,11 +445,11 @@ public class Card
                 LoreValue = 1,
                 Name = "OLAF",
                 Strength = 1,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Friendly Snowman",
                 Willpower = 3,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -460,9 +460,9 @@ public class Card
                 Ink = InkType.Sapphire,
                 InkwellIcon = false,
                 Name = "ONE JUMP AHEAD",
-                Type = CardType.Song,
+                Type = GlimmerType.Song,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -475,11 +475,11 @@ public class Card
                 LoreValue = 1,
                 Name = "PASCAL",
                 Strength = 1,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Rapunzel's Companion",
                 Willpower = 1,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -493,11 +493,11 @@ public class Card
                 LoreValue = 1,
                 Name = "PRINCE ERIC",
                 Strength = 1,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Dashing and Brave",
                 Willpower = 3,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -510,20 +510,20 @@ public class Card
                 LoreValue = 2,
                 Name = "SCAR",
                 Strength = 5,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Mastermind",
                 Willpower = 4,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification> { Classification.Action, },
                 Cost = 3,
                 Ink = InkType.Steel,
                 InkwellIcon = true,
                 Name = "SMASH",
-                Type = CardType.Action,
+                Type = GlimmerType.Action,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -537,11 +537,11 @@ public class Card
                 LoreValue = 1,
                 Name = "STITCH",
                 Strength = 2,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "New Dog",
                 Willpower = 2,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -554,11 +554,11 @@ public class Card
                 LoreValue = 1,
                 Name = "THE WARDROBE",
                 Strength = 3,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Belle's Confidant",
                 Willpower = 4,
             },
-            new Card
+            new Glimmer
             {
                 Classifications = new List<Classification>
                 {
@@ -572,36 +572,38 @@ public class Card
                 LoreValue = 1,
                 Name = "YZMA",
                 Strength = 2,
-                Type = CardType.Character,
+                Type = GlimmerType.Character,
                 Version = "Alchemist",
                 Willpower = 2,
             }
         };
     }
 
-    public static Card GetCard(string name, string? version)
+    public static Glimmer GetGlimmer(string name, string? version)
     {
-        Card? card;
+        Glimmer? glimmer;
         if (String.IsNullOrWhiteSpace(version))
         {
-            card = AllCards.FirstOrDefault(c => name.Equals(c.Name));
+            glimmer = AllGlimmers.FirstOrDefault(c => name.Equals(c.Name));
         }
         else
         {
-            card = AllCards.FirstOrDefault(c => name.Equals(c.Name) && version.Equals(c.Version));
+            glimmer = AllGlimmers.FirstOrDefault(
+                c => name.Equals(c.Name) && version.Equals(c.Version)
+            );
         }
 
-        if (card == null)
+        if (glimmer == null)
         {
-            return new Card();
+            return new Glimmer();
         }
 
-        return card;
+        return glimmer;
     }
 
-    public Card Clone()
+    public Glimmer Clone()
     {
-        return new Card
+        return new Glimmer
         {
             Classifications = Classifications,
             Cost = Cost,
@@ -658,14 +660,14 @@ public class Card
             return false;
         }
 
-        if (Type == CardType.Action)
+        if (Type == GlimmerType.Action)
         {
             if (Classifications.Contains(Classification.Action) == false)
             {
                 return false;
             }
         }
-        else if (Type == CardType.Character)
+        else if (Type == GlimmerType.Character)
         {
             if (LoreValue == null)
             {
@@ -687,14 +689,14 @@ public class Card
                 return false;
             }
         }
-        else if (Type == CardType.Item)
+        else if (Type == GlimmerType.Item)
         {
             if (Classifications.Contains(Classification.Item) == false)
             {
                 return false;
             }
         }
-        else if (Type == CardType.Song)
+        else if (Type == GlimmerType.Song)
         {
             if (Classifications.Contains(Classification.Action) == false)
             {
