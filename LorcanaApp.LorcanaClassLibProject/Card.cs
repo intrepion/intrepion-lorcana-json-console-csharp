@@ -155,7 +155,7 @@ public class Card
                 Cost = 1,
                 Ink = InkType.Amber,
                 InkwellIcon = true,
-                Name = "CONTROL YOUR TEMPER",
+                Name = "CONTROL YOUR TEMPER!",
                 Type = CardType.Action,
             },
             new Card
@@ -256,7 +256,7 @@ public class Card
                 Name = "GOONS",
                 Strength = 2,
                 Type = CardType.Character,
-                Version = "Maleficent's Goons",
+                Version = "Maleficent's Underlings",
                 Willpower = 2,
             },
             new Card

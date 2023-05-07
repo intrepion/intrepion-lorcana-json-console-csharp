@@ -190,6 +190,11 @@ public class Deck
             return new List<Format>();
         }
 
+        if (_cards.Any(c1 => _cards.FindAll(c2 => c1 == c2).Count > 3))
+        {
+            return new List<Format>();
+        }
+
         return new List<Format> { Format.Demo };
     }
 }

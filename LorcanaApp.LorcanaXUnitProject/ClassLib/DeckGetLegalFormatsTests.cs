@@ -35,7 +35,7 @@ public class DeckGetLegalFormatsTests
         var expected = 0;
         var deck = Deck.GetDeck(Format.Demo, "GAMA 2023 - Amber / Amethyst");
 
-        deck.AddCard(Card.GetCard("ARIEL", "On Human Legs"));
+        deck.AddCard(Card.GetCard("FRIENDS ON THE OTHER SIDE", null));
         var formats = deck.GetLegalFormats();
         var actual = formats.Count;
 
