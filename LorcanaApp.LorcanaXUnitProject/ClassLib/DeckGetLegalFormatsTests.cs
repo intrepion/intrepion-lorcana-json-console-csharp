@@ -7,9 +7,13 @@ public class DeckGetLegalFormatsTests
     [Fact]
     public void GetLegalFormats_EmptyDeck_EmptyList()
     {
+        var expected = 0;
         var deck = new Deck();
 
-        deck.GetLegalFormats();
+        var formats = deck.GetLegalFormats();
+        var actual = formats.Count;
+
+        Assert.Equal(expected, actual);
     }
 
     [Fact]
