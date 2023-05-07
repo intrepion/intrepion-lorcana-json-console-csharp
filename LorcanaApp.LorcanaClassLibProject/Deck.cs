@@ -3,6 +3,18 @@ namespace LorcanaApp.LorcanaClassLibProject;
 public class Deck
 {
     private List<Card> _cards { get; set; } = new List<Card>();
+    public static List<Deck> AllDecks { get; set; }
+    public string? Name { get; set; }
+
+    static Deck()
+    {
+        AllDecks = new List<Deck> { };
+    }
+
+    public static Deck? GetDeck(Format format, string name)
+    {
+        return AllDecks.Find(d => d.Name == name && d.GetLegalFormats().Contains(format));
+    }
 
     public void AddCard(Card card)
     {
