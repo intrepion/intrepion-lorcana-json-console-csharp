@@ -17,6 +17,13 @@ public class DeckGetLegalFormatsTests
     }
 
     [Fact]
+    public void GetLegalFormats_Inks3_EmptyList()
+    {
+        var expected = 0;
+        var deck = Deck.GetDeck(Format.Demo, "GAMA - Sapphire / Steel");
+    }
+
+    [Fact]
     public void GetLegalFormats_DeckDemo_FormatDemo()
     {
         var expected = 1;
