@@ -53,6 +53,11 @@ public class Deck
 
     public List<Format> GetLegalFormats()
     {
+        if (_cards.Count < 40)
+        {
+            return new List<Format>();
+        }
+
         return new List<Format> { Format.Demo };
     }
 }

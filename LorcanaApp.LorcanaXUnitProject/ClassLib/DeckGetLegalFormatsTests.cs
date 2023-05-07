@@ -44,7 +44,7 @@ public class DeckGetLegalFormatsTests
         deck.AddCard(Card.GetCard("MALEFICENT", "Sinister Visitor"));
         deck.AddCard(Card.GetCard("MALEFICENT", "Sinister Visitor"));
         deck.AddCard(Card.GetCard("MALEFICENT", "Sinister Visitor"));
-        deck.AddCard(Card.GetCard("AURORA", "Dreaming Guardian	1"));
+        deck.AddCard(Card.GetCard("AURORA", "Dreaming Guardian"));
         deck.AddCard(Card.GetCard("BEAST", "Hardheaded"));
         deck.AddCard(Card.GetCard("BEAST", "Hardheaded"));
         deck.AddCard(Card.GetCard("SCAR", "Mastermind"));
@@ -59,6 +59,9 @@ public class DeckGetLegalFormatsTests
         deck.AddCard(Card.GetCard("SMASH", null));
         deck.AddCard(Card.GetCard("FRYING PAN", null));
         deck.AddCard(Card.GetCard("FRYING PAN", null));
+        deck.AddCard(Card.GetCard("COCONUT BASKET", null));
+        deck.AddCard(Card.GetCard("COCONUT BASKET", null));
+        deck.AddCard(Card.GetCard("COCONUT BASKET", null));
 
         var formats = deck.GetLegalFormats();
         var actual = formats.Count;
