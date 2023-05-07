@@ -53,6 +53,6 @@ public class Deck
 
     public List<Format> GetLegalFormats()
     {
-        return new List<Format>();
+        return new List<Format> { Format.Demo };
     }
 }
