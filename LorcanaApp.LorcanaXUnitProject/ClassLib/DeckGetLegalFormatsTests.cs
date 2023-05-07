@@ -20,7 +20,7 @@ public class DeckGetLegalFormatsTests
     public void GetLegalFormats_Inks3_EmptyList()
     {
         var expected = 0;
-        var deck = Deck.GetDeck(Format.Demo, "GAMA 2023 - Sapphire / Steel");
+        var deck = Deck.GetDeck(Format.Demo, "GAMA 2023 - Sapphire / Steel").Clone();
 
         deck.AddCard(Card.GetCard("CHESHIRE CAT", "Not All There"));
         var formats = deck.GetLegalFormats();

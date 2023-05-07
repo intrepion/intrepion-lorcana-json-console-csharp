@@ -73,6 +73,14 @@ public class Deck
         _cards.Add(card);
     }
 
+    public Deck Clone()
+    {
+        var deck = new Deck();
+        deck.Name = Name;
+        deck._cards = new List<Card>(_cards);
+        return deck;
+    }
+
     public List<Card> GetLegalCardsToAdd(Format format)
     {
         if (Card.AllCards.Any(c1 => _cards.FindAll(c2 => c1 == c2).Count > 3))
@@ -118,6 +126,20 @@ public class Deck
     public List<Format> GetLegalFormats()
     {
         if (_cards.Count < 40)
+        {
+            return new List<Format>();
+        }
+
+        var inkTypes = new List<InkType>();
+        _cards.ForEach(c =>
+        {
+            if (c.Ink != null && (inkTypes.Contains((InkType)c.Ink) == false))
+            {
+                inkTypes.Add((InkType)c.Ink);
+            }
+        });
+
+        if (inkTypes.Count > 2)
         {
             return new List<Format>();
         }
