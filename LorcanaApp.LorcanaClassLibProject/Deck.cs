@@ -51,5 +51,8 @@ public class Deck
         return legalCards;
     }
 
-    public void GetLegalFormats() { }
+    public List<Format> GetLegalFormats()
+    {
+        return new List<Format>();
+    }
 }
