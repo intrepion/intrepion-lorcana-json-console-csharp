@@ -8,12 +8,64 @@ public class Deck
 
     static Deck()
     {
-        AllDecks = new List<Deck> { };
+        AllDecks = new List<Deck>();
+
+        var gama2023SapphireSteel = new Deck();
+        gama2023SapphireSteel.Name = "GAMA 2023 - Sapphire / Steel";
+        gama2023SapphireSteel.AddCard(Card.GetCard("GOONS", "Maleficent’s Underlings"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("GOONS", "Maleficent’s Underlings"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("FLOUNDER", "Voice of Reason"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("FLOUNDER", "Voice of Reason"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("CAPTAIN HOOK", "Forceful Duelist"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("CAPTAIN HOOK", "Forceful Duelist"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("CAPTAIN HOOK", "Forceful Duelist"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("AURORA", "Regal Princess"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("AURORA", "Regal Princess"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("AURORA", "Regal Princess"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("PRINCE ERIC", "Dashing and Brave"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("PRINCE ERIC", "Dashing and Brave"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("KRISTOFF", "Official Ice Master"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("KRISTOFF", "Official Ice Master"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("JASMINE", "Disguised"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("JASMINE", "Disguised"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("AURORA", "Briar Rose"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("AURORA", "Briar Rose"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("AURORA", "Briar Rose"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("MALEFICENT", "Sinister Visitor"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("MALEFICENT", "Sinister Visitor"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("MALEFICENT", "Sinister Visitor"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("AURORA", "Dreaming Guardian"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("BEAST", "Hardheaded"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("BEAST", "Hardheaded"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("SCAR", "Mastermind"));
+        gama2023SapphireSteel.AddCard(Card.GetCard("DEVELOP YOUR BRAIN", null));
+        gama2023SapphireSteel.AddCard(Card.GetCard("DEVELOP YOUR BRAIN", null));
+        gama2023SapphireSteel.AddCard(Card.GetCard("DEVELOP YOUR BRAIN", null));
+        gama2023SapphireSteel.AddCard(Card.GetCard("FIRE THE CANNONS!", null));
+        gama2023SapphireSteel.AddCard(Card.GetCard("FIRE THE CANNONS!", null));
+        gama2023SapphireSteel.AddCard(Card.GetCard("ONE JUMP AHEAD", null));
+        gama2023SapphireSteel.AddCard(Card.GetCard("ONE JUMP AHEAD", null));
+        gama2023SapphireSteel.AddCard(Card.GetCard("SMASH", null));
+        gama2023SapphireSteel.AddCard(Card.GetCard("SMASH", null));
+        gama2023SapphireSteel.AddCard(Card.GetCard("FRYING PAN", null));
+        gama2023SapphireSteel.AddCard(Card.GetCard("FRYING PAN", null));
+        gama2023SapphireSteel.AddCard(Card.GetCard("COCONUT BASKET", null));
+        gama2023SapphireSteel.AddCard(Card.GetCard("COCONUT BASKET", null));
+        gama2023SapphireSteel.AddCard(Card.GetCard("COCONUT BASKET", null));
+
+        AllDecks.Add(gama2023SapphireSteel);
     }
 
-    public static Deck? GetDeck(Format format, string name)
+    public static Deck GetDeck(Format format, string name)
     {
-        return AllDecks.Find(d => d.Name == name && d.GetLegalFormats().Contains(format));
+        var deck = AllDecks.Find(d => d.Name == name && d.GetLegalFormats().Contains(format));
+
+        if (deck == null)
+        {
+            return new Deck();
+        }
+
+        return deck;
     }
 
     public void AddCard(Card card)

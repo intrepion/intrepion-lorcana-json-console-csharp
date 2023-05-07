@@ -20,55 +20,20 @@ public class DeckGetLegalFormatsTests
     public void GetLegalFormats_Inks3_EmptyList()
     {
         var expected = 0;
-        var deck = Deck.GetDeck(Format.Demo, "GAMA - Sapphire / Steel");
+        var deck = Deck.GetDeck(Format.Demo, "GAMA 2023 - Sapphire / Steel");
+
+        deck.AddCard(Card.GetCard("CHESHIRE CAT", "Not All There"));
+        var formats = deck.GetLegalFormats();
+        var actual = formats.Count;
+
+        Assert.Equal(expected, actual);
     }
 
     [Fact]
     public void GetLegalFormats_DeckDemo_FormatDemo()
     {
         var expected = 1;
-        var deck = new Deck();
-
-        deck.AddCard(Card.GetCard("GOONS", "Maleficent’s Underlings"));
-        deck.AddCard(Card.GetCard("GOONS", "Maleficent’s Underlings"));
-        deck.AddCard(Card.GetCard("FLOUNDER", "Voice of Reason"));
-        deck.AddCard(Card.GetCard("FLOUNDER", "Voice of Reason"));
-        deck.AddCard(Card.GetCard("CAPTAIN HOOK", "Forceful Duelist"));
-        deck.AddCard(Card.GetCard("CAPTAIN HOOK", "Forceful Duelist"));
-        deck.AddCard(Card.GetCard("CAPTAIN HOOK", "Forceful Duelist"));
-        deck.AddCard(Card.GetCard("AURORA", "Regal Princess"));
-        deck.AddCard(Card.GetCard("AURORA", "Regal Princess"));
-        deck.AddCard(Card.GetCard("AURORA", "Regal Princess"));
-        deck.AddCard(Card.GetCard("PRINCE ERIC", "Dashing and Brave"));
-        deck.AddCard(Card.GetCard("PRINCE ERIC", "Dashing and Brave"));
-        deck.AddCard(Card.GetCard("KRISTOFF", "Official Ice Master"));
-        deck.AddCard(Card.GetCard("KRISTOFF", "Official Ice Master"));
-        deck.AddCard(Card.GetCard("JASMINE", "Disguised"));
-        deck.AddCard(Card.GetCard("JASMINE", "Disguised"));
-        deck.AddCard(Card.GetCard("AURORA", "Briar Rose"));
-        deck.AddCard(Card.GetCard("AURORA", "Briar Rose"));
-        deck.AddCard(Card.GetCard("AURORA", "Briar Rose"));
-        deck.AddCard(Card.GetCard("MALEFICENT", "Sinister Visitor"));
-        deck.AddCard(Card.GetCard("MALEFICENT", "Sinister Visitor"));
-        deck.AddCard(Card.GetCard("MALEFICENT", "Sinister Visitor"));
-        deck.AddCard(Card.GetCard("AURORA", "Dreaming Guardian"));
-        deck.AddCard(Card.GetCard("BEAST", "Hardheaded"));
-        deck.AddCard(Card.GetCard("BEAST", "Hardheaded"));
-        deck.AddCard(Card.GetCard("SCAR", "Mastermind"));
-        deck.AddCard(Card.GetCard("DEVELOP YOUR BRAIN", null));
-        deck.AddCard(Card.GetCard("DEVELOP YOUR BRAIN", null));
-        deck.AddCard(Card.GetCard("DEVELOP YOUR BRAIN", null));
-        deck.AddCard(Card.GetCard("FIRE THE CANNONS!", null));
-        deck.AddCard(Card.GetCard("FIRE THE CANNONS!", null));
-        deck.AddCard(Card.GetCard("ONE JUMP AHEAD", null));
-        deck.AddCard(Card.GetCard("ONE JUMP AHEAD", null));
-        deck.AddCard(Card.GetCard("SMASH", null));
-        deck.AddCard(Card.GetCard("SMASH", null));
-        deck.AddCard(Card.GetCard("FRYING PAN", null));
-        deck.AddCard(Card.GetCard("FRYING PAN", null));
-        deck.AddCard(Card.GetCard("COCONUT BASKET", null));
-        deck.AddCard(Card.GetCard("COCONUT BASKET", null));
-        deck.AddCard(Card.GetCard("COCONUT BASKET", null));
+        var deck = Deck.GetDeck(Format.Demo, "GAMA 2023 - Sapphire / Steel");
 
         var formats = deck.GetLegalFormats();
         var actual = formats.Count;
