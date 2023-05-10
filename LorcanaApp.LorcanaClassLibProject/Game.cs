@@ -4,7 +4,10 @@ public class Game
 {
     public void AddPlayer() { }
 
-    public void GetHistory() { }
+    public List<int> GetHistory()
+    {
+        return new List<int>();
+    }
 
     public List<int> GetLegalFormats()
     {
