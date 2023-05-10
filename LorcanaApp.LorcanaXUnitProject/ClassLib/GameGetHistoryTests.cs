@@ -9,6 +9,6 @@ public class GameGetHistoryTests
     {
         var game = new Game();
 
-        game.GetHistory();
+        var _ = game.GetHistory();
     }
 }
